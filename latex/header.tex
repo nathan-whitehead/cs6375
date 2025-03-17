@@ -1,0 +1,297 @@
+%%% used to control headers and footers
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{parskip}
+%%%
+
+%%% used for better equations and theorems
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts} %don't think I need this one anymore but just in case
+%%%
+
+%%%used to create graphics in latex
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+%%%
+
+%%% used for writing pseudocode if needed
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+%%%
+
+%%% improves control over enumerate, itemize, and description.
+\usepackage{enumitem}
+%%%
+
+
+
+
+%%%%%%%%%%%%%%%%% tables libraries %%%%%%%%%%%%%%%%%
+\usepackage{tabularray}
+\usepackage{siunitx}
+\UseTblrLibrary{booktabs, siunitx}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+%used to make multicol tables.
+\usepackage{multicol}
+\newsavebox\ltmcbox%
+
+%replace the \subfile{...} with your own to make them work
+%\setbox\ltmcbox\vbox{
+%\makeatletter\col@number\@ne
+%\subfile{files/filename.tex}
+%\unskip
+%\unpenalty
+%\unpenalty}
+
+%used to fix extra left space when trying multicol tables
+\usepackage{changepage}
+% hyperref is used to make the table of contents clickable
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+
+%adjust spacing as necessary, not a great fix but at least it works
+%\setlength\columnsep{-2in}
+%\begin{adjustwidth}{-2.5in}{}
+%%%
+
+
+
+
+%%% improves word and letter spacing
+\usepackage{microtype}
+%%%
+
+%%% using listings to create inserted code into the doc.
+%(style code from overleaf, much better than before.
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{codepink}{rgb}{0.898, 0.247, 0.451}
+\definecolor{codebrown}{rgb}{0.525, 0.514, 0.439}
+
+\usepackage{fontspec}
+%\setmonofont{Monaco}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{verbatim}{\footnotesize}
+
+\lstdefinestyle{mystyle}{
+   backgroundcolor=\color{backcolour},
+   commentstyle=\color{codebrown},
+   keywordstyle=\color{codepink},
+   numberstyle=\tiny\color{codegray},
+   stringstyle=\color{codegreen},
+   basicstyle=\ttfamily\footnotesize,
+   breakatwhitespace=false,         
+   breaklines=true,                 
+   captionpos=b,                    
+   keepspaces=true,                 
+   numbers=left,                    
+   numbersep=5pt,                  
+   showspaces=false,                
+   showstringspaces=false,
+   showtabs=false,          
+   tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Define CSS as a custom language
+\lstdefinelanguage{CSS}{
+  morekeywords={color,background,margin,padding,font-size,font-family,border,width,height,display,position,float,clear,top,right,bottom,left},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]
+  morestring=[b]',
+}
+\lstdefinelanguage{js}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  sensitive=true
+}
+
+%%%
+
+
+
+%%%set the font (only works with LuaLaTeX or XeLaTeX.)
+%\usepackage{fontspec}
+%\setmainfont{Georgia}
+%\usepackage[math-style=ISO]{unicode-math} %trying to match georgia font for math
+%\setmathfont{STIX Two Math}
+%%%
+
+
+
+
+%%%better underline (\ul or \bful and \sout for strikeout)
+\usepackage{ulem} 
+\renewcommand{\ULdepth}{1.5pt}
+
+\usepackage{contour} %for not overlapping uline with low letters
+\contourlength{0.5pt}
+
+\newcommand{\ul}[1]{\uline{\phantom{#1}}\llap{\contour{white}{#1}}}  %normal uline
+\newcommand{\bful}[1]{\def\ULthickness{0.7pt}\def\ULdepth{1.7pt}\uline{\phantom{#1}}\llap{\contour{white}{#1}}} %for boldface
+\newcommand\reduline{\bgroup\markoverwith{\textcolor{red}{\rule[-0.5ex]{5pt}{0.4pt}}}\ULon} %for red text
+%%%  
+
+
+
+
+%%% used to bring in tex from other subfiles (could be subsections or python output)
+\usepackage{blindtext} 
+\usepackage{subfiles}
+%%%
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorNameShort}
+\chead{\hmwkClass : \hmwkTitle}
+\rhead{\hmwkDueDate}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Question Sections
+%
+
+\newcommand{\enterQuestionHeader}[1]{
+   \nobreak\extramarks{}{Question \arabic{#1} continued on next page\ldots}\nobreak{}
+   \nobreak\extramarks{Question \arabic{#1} (continued)}{Question \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitQuestionHeader}[1]{
+   \nobreak\extramarks{Question \arabic{#1} (continued)}{Question \arabic{#1} continued on next page\ldots}\nobreak{}
+   \stepcounter{#1}
+   \nobreak\extramarks{Question \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkQuestionCounter}
+\setcounter{homeworkQuestionCounter}{1}
+\nobreak\extramarks{Question \arabic{homeworkQuestionCounter}}{}\nobreak{}
+
+%
+% Homework Question Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% Question counter. This is useful for when the Questions given for your
+% assignment aren't sequential. See the last 3 Questions of this template for an
+% example.
+%
+\newenvironment{homeworkQuestion}[1][-1]{
+   \ifnum#1>0
+      \setcounter{homeworkQuestionCounter}{#1}
+   \fi
+   \section{Question \arabic{homeworkQuestionCounter}}
+   \setcounter{partCounter}{1}
+   \enterQuestionHeader{homeworkQuestionCounter}
+}{
+   \exitQuestionHeader{homeworkQuestionCounter}
+}
+
+
+
+
+
+
+
+
+%
+% Title Page
+%
+\title{
+   \vspace{2in}
+   \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+   \normalsize\vspace{0.1in}\small{\hmwkDueDate\ }\\
+   \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ }}\\
+%   \vspace{0.1 in}\large{\textit{\hmwkClassTA\ }} %uncomment if the T.A. is relevant
+   \vspace{3in}
+}
+
+\author{\hmwkAuthorName}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}}
+
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Answer section header
+\definecolor{darkblue}{HTML}{00008B}
+\newenvironment{answer}{
+
+
+   \smallskip
+   \color{darkblue}
+
+}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+% custom macros
+\newcommand{\img}[1]{\begin{center}\includegraphics[width=5in]{#1}\end{center}}
+\newcommand{\codehtml}[1]{\lstinputlisting[language=HTML]{#1}}
+\newcommand{\codecss}[1]{\lstinputlisting[language=CSS]{#1}}
+
