@@ -1,19 +1,20 @@
 Hidden dimensions: 16, Epochs: 10
 ========== Epoch results ==========
-Epoch 1 Training Loss: -0.19704852108219856 Training accuracy: 0.0, Validation accuracy: 0.0
- Epoch 2 Training Loss: -0.20094517616927632 Training accuracy: 0.0, Validation accuracy: 0.0
- Epoch 3 Training Loss: -0.19961603237141184 Training accuracy: 0.39875, Validation accuracy: 0.39875
- Epoch 4 Training Loss: -0.2016189107224345 Training accuracy: 0.39875, Validation accuracy: 0.39875
- Epoch 5 Training Loss: -0.20160727933049202 Training accuracy: 0.39875, Validation accuracy: 0.39875
- Epoch 6 Training Loss: -0.20163110287487507 Training accuracy: 0.39875, Validation accuracy: 0.39875
- Epoch 7 Training Loss: -0.20165425185859204 Training accuracy: 0.39875, Validation accuracy: 0.39875
- Epoch 8 Training Loss: -0.20166576185822488 Training accuracy: 0.4, Validation accuracy: 0.4
- Epoch 9 Training Loss: -0.20174587526917456 Training accuracy: 0.39875, Validation accuracy: 0.39875
+Epoch 1 Training Loss: -0.20045460760593414 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 2 Training Loss: -0.2009734809398651 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 3 Training Loss: -0.20099486410617828 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 4 Training Loss: -0.20099852979183197 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 5 Training Loss: -0.20339186489582062 Training accuracy: 0.4, Validation accuracy: 0.4
+ Epoch 6 Training Loss: -0.2013755887746811 Training accuracy: 0.39875, Validation accuracy: 0.39875
+ Epoch 7 Training Loss: -0.20162595808506012 Training accuracy: 0.39875, Validation accuracy: 0.39875
+ Epoch 8 Training Loss: -0.20163117349147797 Training accuracy: 0.39875, Validation accuracy: 0.39875
+ Epoch 9 Training Loss: -0.20168380439281464 Training accuracy: 0.39875, Validation accuracy: 0.39875
+ Epoch 10 Training Loss: -0.20168715715408325 Training accuracy: 0.39875, Validation accuracy: 0.39875
 
 ========== Testing ==========
 Testing accuracy: 0.0
-Average loss: -3.8691125781610735e-38
-Total time: 473.75
+Average loss: 0.0
+Total time: 555.49
 ========== Model parameters ==========
 Hidden dim: 16
 Epochs: 10

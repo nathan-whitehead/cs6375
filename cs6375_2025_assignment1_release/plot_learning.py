@@ -38,6 +38,6 @@ ax2.plot(epochs, validation_accuracy, label='Validation Accuracy', color='tab:or
 ax2.tick_params(axis='y', labelcolor='tab:orange')
 
 fig.tight_layout()
-plt.title('Learning Curve')
+# plt.title('Learning Curve')
 plt.savefig('learning_curve.png')
 plt.show()

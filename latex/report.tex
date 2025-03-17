@@ -14,7 +14,7 @@
 \begin{document}
 
 \title{CS 6375 Assignment 1 \\
-\href{github.com/...}{github.com/...}
+\href{https://github.com/nathan-whitehead/cs6375}{https://github.com/nathan-whitehead/cs6375}
 }
 
 \author{\IEEEauthorblockN{Nathan J. Whitehead}
@@ -37,8 +37,8 @@ njw240000 \\
 \section{Introduction and Data (5pts)}
 
 The goal of this assignment is to implement a sentiment classifier on a dataset of yelp reviews, which are labeled with a sentiment level of 1-5. The dataset is split into a training set, a validation set, and a test set the classifier model is trained on the training and validation sets, then evaluated on the test set. There were two architectures of neural networks used: a simple feedforward neural network and a recurrent neural network. The recurrent neural network also made use of a word embedding layer. The performance of the two models was tuned and evaluated. 
-The final RNN product was able to classify the sentiment of the reviews with an accuracy of 0.4, which is better than random guessing, but not particularly impressive. 
-The FFNN was only able to achieve an accuracy of 0.33, which is equivalent to random guessing.
+The RNN model was able to classify the sentiment of the reviews with an accuracy of 0.405. 
+The FFNN was able to achieve an accuracy of 5225.
 
 \subsection{Data} 
 
@@ -227,8 +227,9 @@ Finally, the model is tested on the test data, and the accuracy is output to the
 
 The models were evaluated on the test data, with the metric being used was the accuracy, defined as the number of correct predictions divided by the total number of predictions the model makes.
 Given that there are five classes of outputs, the random guessing accuracy is 0.2. 
-The FFNN was able to achieve an accuracy of 0.33, which is equivalent to random guessing. 
-The RNN was able to achieve an accuracy of 0.4, which is only slightly better than random.
+The FFNN was able to achieve an accuracy of 0.522, which is significantly better. 
+The RNN was able to achieve an accuracy of 0.405, which is about twice as good as random. 
+There may be some bug present in the RNN model, as the test accuracy goes to zero in some cases, but I was unable to resolve the issue in time.
 
 \subsection{Results (30pts)}
 
@@ -248,11 +249,11 @@ The RNN was able to achieve an accuracy of 0.4, which is only slightly better th
  & 64 & 10 & 0.50375 \\
 \hline
 {\SetCell[r=6]{c}RNN} & 2 & 10 & 0.4 \\
- & 4 & 10 & 0.4 \\
- & 8 & 10 & 0.0 \\
- & 16 & 10 & 0.xx \\
- & 32 & 10 & 0.xx \\
- & 64 & 10 & 0.xx \\
+ & 4 & 10 & 0.2 \\
+ & 8 & 10 & 0.405 \\
+ & 16 & 10 & 0.0 \\
+ & 32 & 10 & 0.4 \\
+ & 64 & 10 & 0.4 \\
 \hline
 \end{tblr}
 \end{center}
