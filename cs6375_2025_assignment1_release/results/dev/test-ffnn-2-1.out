@@ -1,0 +1,23 @@
+Hidden dimensions: 2, Epochs: 1
+========== Epoch results ==========
+Epoch 1 Training loss: 0.9211582642793655 Training accuracy: 0.6, Validation accuracy: 0.6
+
+========== Model parameters ==========
+Hidden dim: 2
+Epochs: 1
+Train data: ./training.json
+Validation data: ./validation.json
+Test data: ./test.json
+Seed: 42
+Optimizer: SGD
+Learning rate: 0.01
+Momentum: 0.9
+Loss: NLLLoss
+Activation: ReLU
+Softmax: LogSoftmax
+Model: FFNN
+Vocab size: 65667
+Train data size: 8000
+Validation data size: 800
+Test data size: 800
+========== Test Results ==========

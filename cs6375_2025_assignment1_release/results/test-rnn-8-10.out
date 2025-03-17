@@ -1,0 +1,31 @@
+Hidden dimensions: 8, Epochs: 10
+========== Epoch results ==========
+Epoch 1 Training Loss: -0.20935222506523132 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 2 Training Loss: -0.20004642009735107 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 3 Training Loss: -0.20008528232574463 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 4 Training Loss: -0.20011085271835327 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 5 Training Loss: -0.20192673802375793 Training accuracy: 0.0, Validation accuracy: 0.0
+ Epoch 6 Training Loss: -0.19947117567062378 Training accuracy: 0.1975, Validation accuracy: 0.1975
+ Epoch 7 Training Loss: -0.20178812742233276 Training accuracy: 0.0, Validation accuracy: 0.0
+
+========== Testing ==========
+Testing accuracy: 0.405
+Average loss: -4.3502366323434455e-26
+Total time: 338.26
+========== Model parameters ==========
+Hidden dim: 8
+Epochs: 10
+Train data: ./training.json
+Validation data: ./validation.json
+Test data: ./test.json
+Seed: 42
+Optimizer: SGD
+Learning rate: 0.01
+Momentum: 0.9
+Loss: NLLLoss
+Activation: ReLU
+Softmax: LogSoftmax
+Model: FFNN
+Train data size: 16000
+Validation data size: 800
+Minibatch size: 16
